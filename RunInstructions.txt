@@ -1,0 +1,67 @@
+Instruction to compile and run the program
+_______________________________________________
+1. Java 11 installed and path set to JAVA_HOME
+Check java version by typing "java -version"
+Set Java Path
+export JAVA_HOME=<jdk_installation_path>
+--------------------------------------------------
+
+2. Install maven if required
+Maven is downloadable as a zip file at https://maven.apache.org/download.cgi. Only the binaries are required, so look for the link to apache-maven-{version}-bin.zip or apache-maven-{version}-bin.tar.gz.
+
+Once you have downloaded the zip file, unzip it to your computer. Then add the bin folder to your path.
+
+To test the Maven installation, run mvn from the command-line:
+
+mvn -v
+------------------------------------------------------------
+3. Navigate to the project directory CryptoWebservice
+execute maven command
+
+cd <project_directory>
+mvn clean package
+
+This will create crypto-webservices-1.0-SNAPSHOT.jar under target directory
+-----------------------------------------------------------
+4. Navigate to target directory
+cd target
+
+java -jar crypto-webservices-1.0-SNAPSHOT.jar
+
+OR Alternatively run the shell script
+
+run.sh 
+----------------------------------------------------
+
+Make sure the service is running on localhost and port:8100
+
+5. Testing using POSTMAN
+Import CryptoWebServicesAPI.postman_collection into POSTMAN Test Tool
+
+1. PushAndRecalculate API 
+POST method and param is passed with Content Type
+application/x-www-form-urlencoded in Postman Request
+
+OR 
+
+curl --location --request POST 'http://localhost:8100/crypto/api/v1/pushAndRecalculate' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'number=4'
+
+2. PushRecalculateAndEncrypt API
+
+POST method and param is passed with Content Type
+application/x-www-form-urlencoded in Postman Request
+
+OR 
+
+curl --location --request POST 'http://localhost:8100/crypto/api/v1/pushAndRecalculate' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'number=4'
+
+3. Decrypt API
+
+GET method and param is passed as path param
+curl --location --request GET 'http://localhost:8100/crypto/api/v1/decrypt/wExwmFDac7a350hz2j5gDjSokcRp_PQf0xLQ5RtbI30'
+
+

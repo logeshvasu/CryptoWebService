@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "bd8c42b7-d5cf-4b73-8e16-0d3a8c35302b",
+		"name": "CryptoWebServicesAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PushAndReCalculate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "number",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8100/crypto/api/v1/pushAndRecalculate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"crypto",
+						"api",
+						"v1",
+						"pushAndRecalculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PushRecalculateAndEncrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "number",
+							"value": "9",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8100/crypto/api/v1/pushRecalculateAndEncrypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"crypto",
+						"api",
+						"v1",
+						"pushRecalculateAndEncrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decrypt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8100/crypto/api/v1/decrypt/3n4KvXfvg9aCQtV9gIZZmw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"crypto",
+						"api",
+						"v1",
+						"decrypt",
+						"3n4KvXfvg9aCQtV9gIZZmw"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

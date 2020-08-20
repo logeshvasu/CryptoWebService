@@ -1,0 +1,35 @@
+Design Consideration
+-------------------------------------
+
+1. Calculate Running average and standard deviation using Welford's Algorithm
+
+Reference
+
+https://www.johndcook.com/blog/standard_deviation/
+https://jonisalonen.com/2013/deriving-welfords-method-for-computing-variance/
+
+
+Design a singleton class that keeps track of running average and standard deviation.
+
+Restarting the app resets the state of the variable.
+
+Assumptions
+
+1. Input bound on the number that fits Double Primitive Type
+
+------------------------------------------------------------
+
+2. DropWizard Setup
+
+https://www.dropwizard.io/en/release-2.0.x/getting-started.html
+
+https://github.com/dropwizard/dropwizard/tree/master/dropwizard-example
+
+-------------------------------------------------------------------
+
+3. Encryption and Decryption using AES (symmetric cryptography)
+
+1. https://owasp.org/www-community/Using_the_Java_Cryptographic_Extensions
+
+2. https://www.veracode.com/blog/research/encryption-and-decryption-java-cryptography
+
