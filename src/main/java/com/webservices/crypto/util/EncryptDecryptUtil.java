@@ -39,9 +39,9 @@ public class EncryptDecryptUtil {
      */
     private static byte[] salt;
     static {
-        SecureRandom secureRandom = new SecureRandom();
         salt = new byte[SALT_SIZE];
-        secureRandom.nextBytes(salt);
+        //SecureRandom secureRandom = new SecureRandom();
+        //secureRandom.nextBytes(salt);
     }
 
     /**
@@ -81,8 +81,8 @@ public class EncryptDecryptUtil {
     private static IvParameterSpec ivspec;
     static {
         byte[] iv = new byte[16];
-        SecureRandom secRandom = new SecureRandom() ;
-        secRandom.nextBytes(iv);
+        //SecureRandom secureRandom = new SecureRandom() ;
+        //secureRandom.nextBytes(iv);
         ivspec = new IvParameterSpec(iv);
     }
 
